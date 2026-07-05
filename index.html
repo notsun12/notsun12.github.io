@@ -552,7 +552,7 @@
     try {
       ws = new WebSocket(url);
     } catch (e) {
-      handleConnError('Could not open a connection to that address.');
+      handleConnError('connection failed, wrong address?');
       return;
     }
     ws.onopen = () => setState('idle');
@@ -563,7 +563,7 @@
       ws = null;
     };
     ws.onerror = () => {
-      handleConnError('Connection error — check the address and that the server is running.');
+      handleConnError('connection failed, wrong address?');
     };
   }
 
