@@ -446,7 +446,7 @@
     switch (next) {
       case 'disconnected':
         led.className = 'led';
-        connectBtn.textContent = 'Connect';
+        connectBtn.textContent = 'connect';
         connectBtn.classList.remove('is-connected');
         talkBtn.disabled = true;
         talkBtn.classList.remove('is-recording');
@@ -460,11 +460,11 @@
         connectBtn.textContent = 'Cancel';
         connectBtn.classList.remove('is-connected');
         talkBtn.disabled = true;
-        hint.textContent = 'Connecting…';
+        hint.textContent = 'connecting…';
         break;
       case 'idle':
         led.className = 'led connected';
-        connectBtn.textContent = 'Disconnect';
+        connectBtn.textContent = 'disconnect';
         connectBtn.classList.add('is-connected');
         talkBtn.disabled = false;
         talkBtn.classList.remove('is-recording');
